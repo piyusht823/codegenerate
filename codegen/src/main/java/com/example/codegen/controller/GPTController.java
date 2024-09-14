@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 @RestController
-@RequestMapping("/api/gpt")
+@RequestMapping("/api")
 public class GPTController {
 
     @Autowired
@@ -28,7 +28,7 @@ public class GPTController {
     
     // API to fetch maximum lines of code for each language
     @CrossOrigin(origins = "http://localhost:3000")
-    @GetMapping("/api/languages/max-lines")
+    @GetMapping("/languages/max-lines")
     public List<LanguageLineCount> getMaxLinesPerLanguage() {
         return gptService.getMaxLinesPerLanguage();
     }

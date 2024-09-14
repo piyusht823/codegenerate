@@ -6,7 +6,7 @@ export default async function handler(req, res) {
 
     try {
       // Call your Spring Boot backend API
-      const response = await axios.post("http://localhost:8082/api/gpt/generate", { input });
+      const response = await axios.post("http://localhost:8082/api/generate", { input });
       res.status(200).json(response.data);
     } catch (error) {
       res.status(500).json({ error: "Error generating response" });

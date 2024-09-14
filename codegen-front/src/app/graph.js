@@ -13,7 +13,7 @@ const Graph = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await axios.get("http://localhost:8082/api/gpt/api/languages/max-lines");
+      const response = await axios.get("http://localhost:8082/api/languages/max-lines");
       const data = response.data;
 
       const labels = data.map((item) => item.language);

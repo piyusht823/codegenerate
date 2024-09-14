@@ -12,7 +12,7 @@ const ChatUI = () => {
     e.preventDefault();
 
     // Send the user input to backend API
-    const response = await axios.post("http://localhost:8082/api/gpt/generate", { input });
+    const response = await axios.post("http://localhost:8082/api/generate", { input });
 
     // Append user message and AI response to chat history
     setMessages((prevMessages) => [
@@ -21,10 +21,10 @@ const ChatUI = () => {
       { sender: "ai", text: response.data.response }
     ]);
 
-    setInput(""); // Clear the input field
+    setInput(""); 
   };
   const handleClear = () => {
-    setMessages([]); // Clear chat history
+    setMessages([]); 
   };
 
   return (
