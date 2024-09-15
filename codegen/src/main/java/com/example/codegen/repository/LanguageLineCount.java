@@ -1,16 +1,15 @@
 package com.example.codegen.repository;
 
 public class LanguageLineCount {
-
     private String language;
-    private int totalLines;
+    private double totalLines;
 
-    public LanguageLineCount(String language, int totalLines) {
+    public LanguageLineCount(String language, double totalLines) {
         this.language = language;
         this.totalLines = totalLines;
     }
 
-    // Getters and Setters
+    // Getters and setters
     public String getLanguage() {
         return language;
     }
@@ -19,11 +18,11 @@ public class LanguageLineCount {
         this.language = language;
     }
 
-    public int getTotalLines() {
+    public double getTotalLines() {
         return totalLines;
     }
 
-    public void setTotalLines(int totalLines) {
+    public void setTotalLines(double totalLines) {
         this.totalLines = totalLines;
     }
 }
