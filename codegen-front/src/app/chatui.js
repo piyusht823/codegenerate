@@ -32,7 +32,7 @@ const ChatUI = () => {
       <div className={styles.chatBox}>
         {messages.map((msg, index) => (
           <div key={index} className={msg.sender === "user" ? styles.userMessage : styles.aiMessage}>
-            {msg.text}
+            <pre style={{ whiteSpace: "pre-wrap" }}>{msg.text}</pre>
           </div>
         ))}
       </div>
